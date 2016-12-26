@@ -3,7 +3,7 @@
 ## 說明：
 這一個 Easy Project 會指導大家如何透過 *Face API Client* 來連線至 Cognitive Source 取得臉部資訊  
 再將這些資訊上傳至預先建立好的 Web Service 將臉部標示出來  
-最後在 UI 控制項顯示後製過的圖片
+最後在 UI 控制項顯示後製過的圖片  
 
 ## TODO: Prepare. 事前準備
 ``` c#
@@ -45,3 +45,7 @@ Draw drawfunction = new Draw();
 string ss = await drawfunction.GetDrawedImage(mydata);
 displayImage.Source = ImageSource.FromStream(() => drawfunction.GetStream(ss));
 ```
+
+# Reference
+### DrawFunction [code](https://github.com/yinnping/drawfunction/blob/master/DrawFunction/DrawFunction.cs)
+### Web Service API [code](https://github.com/yinnping/WorkshopAPI/blob/master/WorkshopAPI/Controllers/DrawController.cs)
